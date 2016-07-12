@@ -5,14 +5,14 @@
 <div class="col-md-4 col-sm-6 wow zoomIn" data-wow-delay="0.1s">
     <div class="tour_container">
         <div class="img_container">
-            <a href="{{product.get_absolute_url}}">
-            <img src="{{product.image.url}}" class="img-responsive" alt="">
+            {# <a href="{{product.get_absolute_url}}"> #}
+            <img src="{{product.image.url}}" class="img-responsive" alt="" style="width:300px;">
             <!--<div class="ribbon top_rated"></div>-->
             <div class="short_info">
-                <i class="{{product.default_category.icon_num}}"></i>{{product.default_category}}
+                {{product.default_category.first}}
                 <!--<span class="price"><sup>₩</sup>{{product.price}}</span>-->
             </div>
-            </a>
+            {# </a> #}
         </div>
         <div class="tour_title">
             <div class="row">

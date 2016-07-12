@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #local apps
     'about',
     'blog',
+    'products',
 ]
 
 MIDDLEWARE_CLASSES = [
