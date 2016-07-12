@@ -6,15 +6,15 @@
     <div class="tour_container">
         <div class="img_container">
             {# <a href="{{product.get_absolute_url}}"> #}
-            <img src=여기에 URL이 들어가야합니다. class="img-responsive" alt="" style="width:300px;">
+            <img src='{{product.image.url}}' class="img-responsive" alt="" style="width:300px;">
             <div class="short_info">
-                여기에 카테고리 이름이 들어가야합니다.
+                {{product.default_category_first}}
             </div>
             {# </a> #}
         </div>
         <div class="tour_title">
             <div class="row">
-            <h3 class="col-xs-9"><strong>여기에 제목이 들어가야합니다.</strong></h3>
+            <h3 class="col-xs-9"><strong>{{product.title}}}</strong></h3>
             </div>
             <div class="rating">
                 <i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i>
