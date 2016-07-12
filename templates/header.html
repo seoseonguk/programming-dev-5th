@@ -1,0 +1,104 @@
+{% load staticfiles%}
+<!-- Header================================================== -->
+<header>
+<!-- 제일 상단 바 -->
+<div id="top_line">
+<div class="container">
+<div class="row">
+</div><!-- End row -->
+</div><!-- End container-->
+</div><!-- End top line-->
+
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-3 col-xs-3">
+<div id="logo"> <!--기업 로고 넣기 -->
+    <a href="/"><img src="{% static 'img/logo.png' %}" width="160" height="34" alt="City tours" data-retina="true" class="logo_normal"></a>
+    <a href="/"><img src="{% static 'img/logo_sticky.png' %}" width="160" height="34" alt="City tours" data-retina="true" class="logo_sticky"></a>
+</div>
+</div>
+<nav class="col-md-9 col-sm-9 col-xs-9">
+<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+<div class="main-menu">
+    <div id="header_menu">
+        <img src="{% static 'img/logo_sticky.png' %}" width="160" height="34" alt="City tours" data-retina="true">
+    </div>
+    <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+    <ul>
+        <li class="submenu">
+            <a href="/" class="show" style="padding-right: 20px;">Home</a>
+        </li>
+        <!--
+        <li class="submenu">
+            <a href="javascript:void(0);" class="show-submenu">Tours <i class="icon-down-open-mini"></i></a>
+            <ul>
+                {% for product in products %}
+                <li><a href="{{product.get_absolute_url}}">{{product.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        -->
+        <li class="submenu">
+            <a href="/" class="show" style="padding-right: 20px;">Contact Us</a>
+        </li>
+
+    </ul>
+</div><!-- End main-menu -->
+
+
+<!--
+<ul id="top_tools">
+    <li>
+        <div class="dropdown dropdown-search">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i></a>
+            <div class="dropdown-menu">
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" style="margin-left:0;">
+                        <i class="icon-search"></i>
+                        </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="dropdown dropdown-cart">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class=" icon-basket-1"></i>Cart (0) </a>
+            <ul class="dropdown-menu" id="cart_items">
+                <li>
+                    <div class="image"><img src="{% static 'img/thumb_cart_1.jpg' %}" alt=""></div>
+                    <strong>
+                    <a href="#">Louvre museum</a>1x $36.00 </strong>
+                    <a href="#" class="action"><i class="icon-trash"></i></a>
+                </li>
+                <li>
+                    <div class="image"><img src="{% static 'img/thumb_cart_2.jpg' %}" alt=""></div>
+                    <strong>
+                    <a href="#">Versailles tour</a>2x $36.00 </strong>
+                    <a href="#" class="action"><i class="icon-trash"></i></a>
+                </li>
+                <li>
+                    <div class="image"><img src="{% static 'img/thumb_cart_3.jpg' %}" alt=""></div>
+                    <strong>
+                    <a href="#">Versailles tour</a>1x $36.00 </strong>
+                    <a href="#" class="action"><i class="icon-trash"></i></a>
+                </li>
+                <li>
+                    <div>Total: <span>$120.00</span></div>
+                    <a href="cart.html" class="button_drop">Go to cart</a>
+                    <a href="payment.html" class="button_drop outline">Check out</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>
+-->
+
+</nav>
+</div>
+</div><!-- container -->
+</header><!-- End Header -->

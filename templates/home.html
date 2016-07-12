@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block css%}
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="{% static 'css/finaltilesgallery.css' %}" rel="stylesheet">
+    <link href="{% static 'css/lightbox2.css' %}"  rel="stylesheet">
+{% endblock %}
+
+
+{% block slider %}
+
+{% include "main_slider.html"%}
+
+{% endblock %}
+
+
+{% block content %}
+
+{% include "main_list.html"%}
+
+
+<div class="container margin_60">
+        <hr>
+        <div class="row">
+            <div class="col-md-8 col-sm-6 hidden-xs">
+                <img src="{% static 'img/laptop.png' %}" alt="Laptop" class="img-responsive laptop">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h3><span>Get started</span> with Tripus</h3>
+                <p>
+                    Tripus provide various programs with local hosts.
+                    Drink, Eat, Play with your own local friends.
+                </p>
+                <ul class="list_order">
+                    <li><span>1</span>Select your preferred programs.</li>
+                    <li><span>2</span>Book your program with kakao-id info.</li>
+                    <li><span>3</span>We will contact you with Kakao.</li>
+                </ul>
+            </div>
+        </div><!-- End row -->
+        </div>
+
+{% endblock %}
+
+{% block javascript %}
+ <!-- Common scripts -->
+ <!-- Specific scripts - Grid gallery -->
+
+ <script src="{% static 'js/jquery.finaltilesgallery.js' %}"></script>
+ <script src="{% static 'js/lightbox2.js' %}"></script>
+<script>
+$(function () {
+     'use strict';
+ //we call Final Tiles Grid Gallery without parameters,
+//see reference for customisations: http://final-tiles-gallery.com/index.html#get-started
+$(".final-tiles-gallery").finalTilesGallery();
+});
+</script>
+{% endblock %}

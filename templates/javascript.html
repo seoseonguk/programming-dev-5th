@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+<script src="{% static 'custom.js' %}"></script>
+<script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'js/common_scripts_min.js' %}"></script>
+<script src="{% static 'js/functions.js' %}"></script>
+
+<script>
+//Search bar
+$(function () {
+"use strict";
+$("#searchDropdownBox").change(function(){
+    var Search_Str = $(this).val();
+    //replace search str in span value
+    $("#nav-search-in-content").text(Search_Str);
+  });
+});
+</script>
