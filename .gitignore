@@ -4,3 +4,4 @@ db.sqlite3
 /staticfiles
 ngrok
 test_regex.py
+*/migrations
