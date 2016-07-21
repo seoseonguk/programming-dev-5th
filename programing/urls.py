@@ -8,7 +8,8 @@ urlpatterns = [
     url(r'^admin/',include(admin.site.urls)),
     url(r'^about/', include('about.urls', namespace='about')),
     # url(r'^', include('blog.urls', namespace='blog')),
-    url(r'^', include('products.urls', namespace='product'))
+    url(r'^', include('products.urls', namespace='product')),
+	url(r'^sum/', include('sum.urls', namespace='sum'))
 ]
 
 
