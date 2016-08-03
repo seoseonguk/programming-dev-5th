@@ -3,6 +3,7 @@ from products import views
 
 urlpatterns =[
 
-    url(r'^$', views.home, name='home'),
+    url(r'^$', views.product_list, name='product_list'),
+    url(r'^(?P<pk>\d+)/$', views.product_detail, name='product_detail')
 
 ]
