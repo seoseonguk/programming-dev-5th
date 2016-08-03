@@ -1,3 +1,5 @@
+from django.conf import settings
+
 from django.db import models
 
 from .validators import ZipCodeValidator
@@ -24,3 +26,12 @@ class ZipCode(models.Model):
     dong = models.CharField(max_length=20)
     gu = models.CharField(max_length=20)
     code = models.CharField(max_length=7, validators=[ZipCodeValidator(True)])
+
+
+class Comment(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    content = models.TextField()
+    product = models.ForeignKey(Product)
+
+    def __str__(self):
+        return self.content

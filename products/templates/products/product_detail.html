@@ -1,7 +1,17 @@
 {% extends "base.html" %}
+{% block slider %}
 
-{% block content%}
-<div class="container">
+{% include "main_slider.html"%}
+
+{% endblock %}
+{% block content %}
+<div class="container margin_60">
+<div class="row">
 {{product.title}}
-</div>
+
+<h1>코멘트 리스트</h1>
+{%for comment in product.comment_set.all%}
+<p>{{comment.content}}</p>
+{% endfor %}
+</div></div>
 {% endblock %}
