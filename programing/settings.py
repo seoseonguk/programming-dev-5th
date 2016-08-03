@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
-    #local apps
+    'xmltodict',
     'about',
     'blog',
     'products',
@@ -128,7 +127,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
-#아마존 서버를 쓰면 이거를 쓰지 않고, 다른 형태의 세팅을 해야한다. 구조를 잘 알아야한다. DIRS(internal)에서 sending 되어서 Root(collecting)로 보내는 거다. 왜냐? 개발 컴퓨터 환경에서는 내 로컬의 주소를 가지고도 페이지를 만들 수 있지만, 실제 배포 단계에서는 서버에 올라간 내용들을 바탕으로 만들어야함.
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_in_pro", "our_static"),

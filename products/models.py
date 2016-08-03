@@ -1,5 +1,7 @@
 from django.db import models
 
+from .validators import ZipCodeValidator
+
 class Product(models.Model):
     title = models.CharField(max_length=120, help_text='제목을 입력해주세요.')
     image = models.ImageField()
@@ -15,3 +17,10 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
+
+class ZipCode(models.Model):
+    city = models.CharField(max_length=20)
+    road = models.CharField(max_length=20)
+    dong = models.CharField(max_length=20)
+    gu = models.CharField(max_length=20)
+    code = models.CharField(max_length=7, validators=[ZipCodeValidator(True)])

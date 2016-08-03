@@ -3,7 +3,7 @@ import requests
 from django.conf import settings
 from django.forms import ValidationError
 from django.utils.deconstruct import deconstructible
-import xmldict
+import xmltodict
 
 
 @deconstructible
@@ -25,7 +25,12 @@ class ZipCodeValidator(object):
         if not re.match(r'^\d{5}$', zip_code):
             raise ValidationError('5자리 숫자로 입력해주세요.')
         if self.is_check_exist:
-            self.check_exist(zip_code)
+            self.check_exist_from_db(zip_code)
+
+    def check_exist_from_db(self, zip_code):
+        from products.models import ZipCode
+        if not ZipCode.objects.filter(code=zip_code).exists():
+            raise ValidationError('없는 우편번호입니다.')
 
     def check_exist(self,zip_code):
         params = {
