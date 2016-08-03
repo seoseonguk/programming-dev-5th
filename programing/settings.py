@@ -139,3 +139,5 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
+
+EPOST_API_KEY = '6815602e275c57fd71470022111456'
